@@ -11,14 +11,14 @@
         android:layout_height="130dp"
         android:src="@drawable/student1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="85dp"/>
+        android:layout_marginTop="50dp"/>
 
     <LinearLayout
         android:id="@+id/line1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_below="@+id/gambar"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="15dp">
 
         <ImageView
             android:id="@+id/img1"
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_below="@+id/line1"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <ImageView
             android:id="@+id/img2"
@@ -68,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_below="@+id/line2"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <ImageView
             android:id="@+id/img3"

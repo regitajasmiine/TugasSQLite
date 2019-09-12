@@ -9,7 +9,7 @@
         android:id="@+id/lila1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp">
         <TextView
             android:id="@+id/txt1"
@@ -26,6 +26,7 @@
             android:layout_below="@+id/txt1"
             android:src="@drawable/ic_create_black_24dp"/>
         <EditText
+            android:id="@+id/edit1"
             android:layout_width="match_parent"
             android:layout_height="70dp"
            android:layout_toRightOf="@+id/iv1"/>
@@ -52,6 +53,7 @@
             android:layout_below="@+id/txt2"
             android:src="@drawable/ic_group_black_24dp"/>
         <EditText
+            android:id="@+id/edit2"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_toRightOf="@+id/iv2"/>
@@ -78,6 +80,7 @@
             android:layout_below="@+id/txt3"
             android:src="@drawable/ic_date_range_black_24dp"/>
         <EditText
+            android:id="@+id/edit3"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_toRightOf="@+id/iv3"/>
@@ -104,6 +107,7 @@
             android:layout_below="@+id/txt4"
             android:src="@drawable/ic_person_black_24dp"/>
         <EditText
+            android:id="@+id/edit4"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_toRightOf="@+id/iv4" />
@@ -130,6 +134,7 @@
             android:layout_below="@+id/txt5"
             android:src="@drawable/ic_place_black_24dp"/>
         <EditText
+            android:id="@+id/edit5"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_toRightOf="@+id/iv5"/>
@@ -141,7 +146,7 @@
         android:layout_height="100dp"
         android:layout_below="@+id/lila5"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="20dp">
         <ImageView
             android:id="@+id/iv6"
             android:layout_width="50dp"
@@ -149,7 +154,7 @@
             android:src="@drawable/ic_save_black_24dp"
             android:layout_marginLeft="50dp"/>
         <Button
-            android:id="@+id/btn4"
+            android:id="@+id/btnSimpan"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_toRightOf="@id/iv6"
