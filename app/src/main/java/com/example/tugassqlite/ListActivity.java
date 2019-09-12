@@ -2,6 +2,9 @@ package com.example.tugassqlite;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +21,13 @@ public class ListActivity extends AppCompatActivity implements RecyclerViewAdapt
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listdata);
+        Button btn1= findViewById(R.id.btn1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ListActivity.this,DialogActivity.class));
+            }
+        });
 
         recyclerView = findViewById(R.id.recyclerview);
         layoutManager = new LinearLayoutManager(ListActivity.this);
@@ -49,7 +59,7 @@ public class ListActivity extends AppCompatActivity implements RecyclerViewAdapt
             intent.putExtra("Tanggal Lahir",currentPerson.getTgl_lahir());
             intent.putExtra("Jenkel",currentPerson.getJenkel());
             intent.putExtra("Alamat",currentPerson.getAlamat());
-            startActivity(intent);
+            startActivity(intent );
         }
 
     }
