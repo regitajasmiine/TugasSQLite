@@ -1,5 +1,6 @@
 package com.example.tugassqlite;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,8 @@ public class DialogActivity extends AppCompatActivity {
     Button btnSave;
     DatabaseHelper databaseHelper;
     Siswa siswa;
-    String nomor;
+
+    Button save;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,7 +29,7 @@ public class DialogActivity extends AppCompatActivity {
         text3 = (EditText) findViewById(R.id.edit3);
         text4 = (EditText) findViewById(R.id.edit4);
         text5 = (EditText) findViewById(R.id.edit5);
-
+        save =(Button) findViewById(R.id.btnSimpan);
         databaseHelper = new DatabaseHelper(DialogActivity.this);
         siswa = new Siswa();
 
@@ -40,18 +42,24 @@ public class DialogActivity extends AppCompatActivity {
                 Etext3 = text3.getText().toString();
                 Etext4 = text4.getText().toString();
                 Etext5 = text5.getText().toString();
+                    siswa.setNomor(Etext1);
+                    siswa.setName(Etext2);
+                    siswa.setTgl_lahir(Etext3);
+                    siswa.setJenkel(Etext4);
+                    siswa.setAlamat(Etext5);
+                    databaseHelper.insert(siswa);
 
-                DatabaseHelper db = new DatabaseHelper(DialogActivity.this);
-                Siswa currentPerson = new Siswa();
-                currentPerson.setNomor(Etext1);
-                currentPerson.setName(Etext2);
-                currentPerson.setTgl_lahir(Etext3);
-                currentPerson.setJenkel(Etext4);
-                currentPerson.setAlamat(Etext5);
 
-                db.insert(currentPerson);
+                text1.setText("");
+                text2.setText("");
+                text3.setText("");
+                text4.setText("");
+                text5.setText("");
             }
         });
 
-        }
     }
+
+
+
+}

@@ -47,8 +47,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         final View view = LayoutInflater.from(context).inflate(R.layout.activity_inputdata, null);
         dialog.setView(view);
         final TextView lihatData= view.findViewById(R.id.lihatData);
-        TextView updateData= view.findViewById(R.id.updateData);
-        final TextView deleteData= view.findViewById(R.id.deleteData);
+        final TextView updateData= view.findViewById(R.id.updateData);
+        final TextView deleteData= view.findViewById(R.id.hapusData);
 
 
                 final AlertDialog alertDialog = dialog.create();
@@ -69,6 +69,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     @Override
                     public void onClick(View view) {
                         listener.onUserClick(currentPerson,"Lihat");
+                    }
+                });
+                updateData.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        listener.onUserClick(currentPerson, "Update");
                     }
                 });
                 alertDialog.show();

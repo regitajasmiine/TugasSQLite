@@ -60,6 +60,15 @@ public class ListActivity extends AppCompatActivity implements RecyclerViewAdapt
             intent.putExtra("Jenkel",currentPerson.getJenkel());
             intent.putExtra("Alamat",currentPerson.getAlamat());
             startActivity(intent );
+        }else if(action == "Update"){
+            DatabaseHelper db = new DatabaseHelper(ListActivity.this);
+            Intent intent = new Intent(ListActivity.this, Update.class);
+            intent.putExtra("Nomor",currentPerson.getNomor());
+            intent.putExtra("Name",currentPerson.getName());
+            intent.putExtra("Tanggal Lahir",currentPerson.getTgl_lahir());
+            intent.putExtra("Jenkel",currentPerson.getJenkel());
+            intent.putExtra("Alamat",currentPerson.getAlamat());
+            startActivity(intent );
         }
 
     }
